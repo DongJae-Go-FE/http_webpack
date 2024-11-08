@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 1000px;
+  height: 800px;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: red;
+
+  list-style: none;
+
+  li {
+    word-break: break-all;
+    flex-basis: 40px;
+    background-color: blueviolet;
+  }
+}
+
+.container2 {
+  display: flex;
+
+  gap: 10px;
+  width: 1000px;
+  height: 800px;
+
+  margin: 20px 0;
+  padding: 0;
+
+  background-color: red;
+
+  list-style: none;
+
+  li {
+    flex-basis: 100px;
+    /*width나 height 값이 basis랑 같은 경우 width나 height가 먼저 적용, 아니면 무조건 basis*/
+    /*auto일경우 지정한 width나 height값 사용 다른 아이템이 늘어날 경우 그거에 맞춰 늘어남*/
+    background-color: blueviolet;
+  }
+}

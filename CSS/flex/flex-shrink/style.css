@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 1000px;
+  height: 800px;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: red;
+
+  list-style: none;
+
+  li {
+    word-break: break-all;
+    flex-basis: 300px;
+    flex-shrink: 0;
+    background-color: blueviolet;
+
+    &:nth-child(3){
+      flex-shrink: 1;
+    }
+  }
+}
+/*flex-wrap 있을 경우 shrink는 안 먹는다.*/
+
+.container2 {
+  display: flex;
+
+  gap: 10px;
+  width: 1000px;
+  height: 800px;
+
+  margin: 120px 0;
+  padding: 0;
+
+  background-color: red;
+
+  list-style: none;
+
+  li {
+    flex-basis: 100px;
+    background-color: blueviolet;
+
+    &:nth-child(odd) {
+      flex-grow: 1;
+    }
+  }
+}

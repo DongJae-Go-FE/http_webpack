@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 1000px;
+  height: 800px;
+
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: red;
+
+  list-style: none;
+
+  li {
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+
+    &:nth-of-type(1) {
+      /*items보다 먼저 그리고 아이템 개별*/
+      align-self: baseline;
+    }
+  }
+}
+
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 1000px;
+  height: 800px;
+
+  margin: 10px 0;
+  padding: 0;
+
+  background-color: red;
+
+  list-style: none;
+
+  li {
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+  }
+}
