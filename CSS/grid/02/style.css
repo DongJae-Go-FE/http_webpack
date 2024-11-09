@@ -1,0 +1,94 @@
+.container {
+  display: grid;
+  gap: 8px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  grid-template-columns: repeat(6, 200px);
+  grid-template-rows: repeat(6, 200px);
+
+  li {
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+
+    &:nth-child(1) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    &:nth-child(2) {
+      grid-row-start: 1;
+      grid-row-end: 4;
+      /*바로 지정하니깐 이상해*/
+
+      grid-column: 3/4;
+    }
+  }
+}
+
+.container2 {
+  display: grid;
+  gap: 8px;
+
+  margin: 100px 0;
+  padding: 0;
+  list-style: none;
+
+  grid-template-columns: repeat(6, 200px);
+  grid-template-rows: repeat(6, 200px);
+
+  li {
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+
+    &:nth-child(1) {
+      grid-column: 1 / 2 span;
+    }
+
+    &:nth-child(2) {
+      grid-column: 3 / 1 span;
+      grid-row: 1 / 3 span;
+    }
+  }
+}
+
+.container3 {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 300px);
+
+  grid-template-areas:
+    "header header header header"
+    "side main main main"
+    "footer footer footer footer";
+  margin: 100px 0;
+  padding: 0;
+  list-style: none;
+
+  .header {
+    grid-area: header;
+    background-color: red;
+  }
+
+  .side {
+    grid-area: side;
+    background-color: aqua;
+  }
+
+  .main {
+    grid-area: main;
+
+    background-color: brown;
+  }
+
+  .footer {
+    grid-area: footer;
+
+    background-color: blue;
+  }
+}

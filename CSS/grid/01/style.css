@@ -1,0 +1,21 @@
+.container {
+  display: grid;
+  gap: 8px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  grid-template-columns: repeat(6, minmax(300px, 1fr));
+  /* grid-template-rows: repeat(6, 200px); */
+  grid-auto-rows: 200px;
+  /* 계속해서 줄이 추가를 해도 자동으로 row영역을 잡아준다*/
+
+  /* grid-auto-columns: ; 계속해서 추가를 해줘도 columns 영역을 잡아준다.*/
+
+  li {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+  }
+}
